@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dynamic Multi-page Fixture</title>
+  </head>
+  <body>
+    <form id="app">
+      <label for="name">Full name</label>
+      <input id="name" autocomplete="name" />
+      <button id="next" type="button">Insert next page</button>
+    </form>
+    <script>
+      document.getElementById('next').addEventListener('click', () => {
+        document.getElementById('app').insertAdjacentHTML(
+          'beforeend',
+          '<section><label for="city">City</label><input id="city" autocomplete="address-level2"><label for="country">国家</label><select id="country"><option value="US">United States</option><option value="CN">China</option></select></section>'
+        );
+      });
+    </script>
+  </body>
+</html>

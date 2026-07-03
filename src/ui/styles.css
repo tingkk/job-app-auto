@@ -1,0 +1,271 @@
+:root {
+  color: #111827;
+  background: #f9fafb;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+.popup {
+  width: 330px;
+  padding: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  margin: 14px 0;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label,
+.label {
+  font-size: 12px;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 9px 10px;
+  background: white;
+}
+
+textarea {
+  min-height: 86px;
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 9px 12px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+button,
+.buttonLike {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.danger {
+  background: #b91c1c;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.status {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 13px;
+}
+
+.errorText {
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.helpBox {
+  margin-top: 14px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  padding: 12px;
+  font-size: 13px;
+}
+
+.helpBox p {
+  margin: 6px 0;
+}
+
+a {
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.diff {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.65fr) minmax(180px, 0.75fr) minmax(360px, 1.6fr);
+  gap: 8px;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.diffList {
+  border-top: 1px solid #e5e7eb;
+}
+
+.diff span,
+.diff strong {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.editableDiff {
+  align-items: stretch;
+}
+
+.inlineEditor {
+  width: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.fileField {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.fileField strong {
+  display: block;
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+
+.fileField p {
+  margin: 6px 0 0;
+}
+
+.buttonLike {
+  border: 0;
+  border-radius: 10px;
+  padding: 9px 12px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+.buttonLike input {
+  display: none;
+}
+
+.learnedList {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.learnedItem {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.learnedItem p {
+  margin: 6px 0;
+  overflow-wrap: anywhere;
+}
+
+.learnedFieldsList {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.learnedFieldRow {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.45fr) minmax(480px, 1fr);
+  gap: 12px;
+  align-items: start;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.learnedFieldRow strong {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 820px) {
+  .page {
+    padding: 18px;
+  }
+
+  .diff,
+  .learnedFieldRow,
+  .fileField {
+    grid-template-columns: 1fr;
+  }
+}

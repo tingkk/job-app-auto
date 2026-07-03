@@ -1,0 +1,12 @@
+node_modules/
+.output/
+.wxt/
+dist/
+*.log
+.DS_Store
+
+# Local tool config (contains machine-specific paths)
+.claude/
+
+# Internal release/publishing docs (store listing, checklist, privacy source)
+docs/
